@@ -58,6 +58,8 @@ public class BackgroundService extends Service {
     private void startAudioForegroundNotification() {
         // start a foreground notification for the playback
         String contentText = mMediaPlayer.isPlaying() ? "Audio playing" : "Audio not playing";
+
+        // the foreground icon is intentionally not visible to not be annoying
         int smallIconDrawable = android.R.drawable.divider_horizontal_dim_dark;
 
         // this intent fires off a "close service" broadcast that we're listening for earlier
